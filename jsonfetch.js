@@ -1,5 +1,5 @@
 // JavaScript Document
-// A script to use JS Fetch API to retrieve information from JSON (in this case from r/teenagers) and to display it
+// A script to use JS Fetch API to retrieve information from JSON (in this case from r/onionhate) and to display it
 
 // https://github.com/mdn/fetch-examples/blob/master/fetch-json/index.html
 // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
