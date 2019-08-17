@@ -47,12 +47,8 @@ fetch('https://www.reddit.com/r/onionhate.json')
   pSelect.appendChild(createBolder);
 })
 .catch(function(error) {
-  var p = document.createElement('p');
-  p.appendChild(
-    document.createTextNode('uh oh: ' + error.message)
-  );
-  document.body.insertBefore(p);
-});
+  console.log("oof")
+}
 
 
 // x-moose: majestic (me when I replace dreamweaver with atom or vs code) //
