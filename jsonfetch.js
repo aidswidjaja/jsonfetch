@@ -48,7 +48,7 @@ fetch('https://www.reddit.com/r/onionhate.json')
 })
 .catch(function(error) {
   console.log("oof" + error)
-}
+})
 
 
 // x-moose: majestic (me when I replace dreamweaver with atom or vs code) //
