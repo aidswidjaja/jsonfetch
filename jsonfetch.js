@@ -47,7 +47,7 @@ fetch('https://www.reddit.com/r/onionhate.json')
   pSelect.appendChild(createBolder);
 })
 .catch(function(error) {
-  console.log("oof" + error)
+  console.log("oof - " + error)
 })
 
 
