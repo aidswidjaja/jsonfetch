@@ -14,7 +14,7 @@
 
 fetch('https://www.reddit.com/r/onionhate.json')
 .then(function(response) {
-  if (!response.ok) {
+  if (!response.ok) { // I believe this is the MDN implementation for Response Status checking, however, Chrome web docs has a different system involving operators: response.status !== 200;
     throw new Error("uh oh: HTTP error, status = " + response.status); // We check that the Response Status = 500 before proceeding
   }
   return response.json();
@@ -33,7 +33,7 @@ fetch('https://www.reddit.com/r/onionhate.json')
   var contents = json.data && json.data.children && json.data.children["1"] && json.data.children["1"].data && json.data.children["1"].data.title;
   createHeader.innerHTML = contents; // To display deeply nested objects, you'll need to make sure you ensure that you use && statements and move down the hierarchy, otherwise you'll receive an undefined error
   var username = json.data && json.data.children && json.data.children["1"] && json.data.children["1"].data && json.data.children["1"].data.author;
-  createPara.innerHTML = "by " + username;
+  createPara.innerHTML = "by " + username; // You can use dot notation: foo.bar; or bracket notation: ["foo"]["bar"]; when referring to JSON, and they can be used interchangeably. Here, I use bracket notation for numbers to avoid syntax errors.
   var potato = json.data && json.data.children && json.data.children["1"] && json.data.children["1"].data && json.data.children["1"].data.score;
   createBold.innerHTML = potato + " points";
   var linebreak = document.createElement('br');
@@ -46,7 +46,7 @@ fetch('https://www.reddit.com/r/onionhate.json')
   pSelect.appendChild(linebreak);
   pSelect.appendChild(createBolder);
 })
-.catch(function(error) {
+.catch(function(error) { // .catch is a fallback mechanism if fetch() fails
   console.log("oof - " + error)
 })
 
